@@ -163,6 +163,7 @@ return [
         /*
          * Application Service Providers...
          */
+        Recca0120\Terminal\TerminalServiceProvider::class,
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,

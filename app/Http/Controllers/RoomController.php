@@ -77,6 +77,6 @@ class RoomController extends Controller
     public function destroy(Room $room)
     {
         Room::destroy($room->id);
-        return redirect()->route('penjamin.index')->with('success', 'Data berhasil dihapus');
+        return redirect()->route('room.index')->with('success', 'Data berhasil dihapus');
     }
 }
