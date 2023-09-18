@@ -18,11 +18,11 @@ class Pasien extends Model
 
     public function penjamin(): BelongsTo
     {
-        return $this->belongsTo(Dokter::class);
+        return $this->belongsTo(Penjamin::class);
     }
 
     public function room(): BelongsTo
     {
-        return $this->belongsTo(Dokter::class);
+        return $this->belongsTo(Room::class);
     }
 }

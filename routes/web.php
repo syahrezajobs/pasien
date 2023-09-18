@@ -5,6 +5,7 @@ use App\Http\Controllers\DokterController;
 use App\Http\Controllers\PasienController;
 use App\Http\Controllers\PenjaminController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\RoomController;
 use Illuminate\Support\Facades\Route;
 
@@ -39,6 +40,9 @@ Route::resource('pasien', PasienController::class);
 Route::resource('dokter', DokterController::class);
 Route::resource('penjamin', PenjaminController::class);
 Route::resource('room', RoomController::class);
-
+// Route::get('/pasien/export', 'PasienController@export')->name('pasien.export');
+Route::get('/report', [ReportController::class, 'index'])->name('report.index');
+Route::get('/report/data/{first}/{last}', [ReportController::class, 'data'])->name('report.data');
+Route::get('/report/data/pdf/{first}/{last}', [ReportController::class, 'exportPDF'])->name('report.export_pdf');
 
 require __DIR__ . '/auth.php';

@@ -6,11 +6,7 @@ use App\Models\Pasien;
 use App\Models\Dokter;
 use App\Models\Room;
 use App\Models\Penjamin;
-use Carbon\Carbon;
-use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
 
 class PasienController extends Controller
 {
@@ -51,9 +47,6 @@ class PasienController extends Controller
 
         return view('pasien.index', compact('pasiens', 'dokters', 'rooms', 'request'));
     }
-
-
-
 
     /**
      * Show the form for creating a new resource.

@@ -163,6 +163,7 @@ return [
         /*
          * Application Service Providers...
          */
+        Yajra\DataTables\DataTablesServiceProvider::class,
         Recca0120\Terminal\TerminalServiceProvider::class,
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
@@ -183,6 +184,7 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
+        'PDF' => Barryvdh\DomPDF\Facade::class,
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 

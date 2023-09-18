@@ -8,21 +8,21 @@
     @method('PUT')
     <div class="form-group">
         <label for="name" class="form-label">Nama</label>
-        <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name') }}">
+        <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name', $dokter->name) }}">
         @error('name')
         <span class="invalid-feedback">{{ $message }}</span>
         @enderror
     </div>
     <div class="form-group">
         <label for="address" class="form-label">Alamat</label>
-        <input type="text" class="form-control @error('address') is-invalid @enderror" id="address" name="address" value="{{ old('address') }}">
+        <input type="text" class="form-control @error('address') is-invalid @enderror" id="address" name="address" value="{{ old('address', $dokter->address) }}">
         @error('address')
         <span class="invalid-feedback">{{ $message }}</span>
         @enderror
     </div>
     <div class="form-group">
         <label for="phone" class="form-label">No HP</label>
-        <input type="phone_number" class="form-control @error('phone') is-invalid @enderror" id="phone" name="phone" value="{{ old('phone') }}">
+        <input type="phone_number" class="form-control @error('phone') is-invalid @enderror" id="phone" name="phone" value="{{ old('phone', $dokter->phone) }}">
         @error('phone')
         <span class="invalid-feedback">{{ $message }}</span>
         @enderror

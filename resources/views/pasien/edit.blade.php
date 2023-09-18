@@ -9,21 +9,21 @@
     <input type="hidden" id="no_rm" name="no_rm" value="">
     <div class="form-group">
         <label for="name" class="form-label">Nama:</label>
-        <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name') }}">
+        <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name', $pasien->name) }}">
         @error('name')
         <span class="invalid-feedback">{{ $message }}</span>
         @enderror
     </div>
     <div class="form-group">
         <label for="phone" class="form-label">No HP:</label>
-        <input type="phone_number" class="form-control @error('phone') is-invalid @enderror" id="phone" name="phone" value="{{ old('phone') }}">
+        <input type="phone_number" class="form-control @error('phone') is-invalid @enderror" id="phone" name="phone" value="{{ old('phone', $pasien->phone) }}">
         @error('phone')
         <span class="invalid-feedback">{{ $message }}</span>
         @enderror
     </div>
     <div class="form-group">
         <label for="address" class="form-label">Alamat:</label>
-        <input type="text" class="form-control @error('address') is-invalid @enderror" id="address" name="address" value="{{ old('address') }}">
+        <input type="text" class="form-control @error('address') is-invalid @enderror" id="address" name="address" value="{{ old('address', $pasien->address) }}">
         @error('address')
         <span class="invalid-feedback">{{ $message }}</span>
         @enderror
@@ -65,7 +65,7 @@
     </div>
     <div class="form-group">
         <label for="tgl_keluar" class="form-label">Tanggal Pulang:</label>
-        <input type="date" class="form-control @error('tgl_keluar') is-invalid @enderror" name="tgl_keluar" id="tgl_keluar" value="{{ old('tgl_keluar') }}">
+        <input type="date" class="form-control @error('tgl_keluar') is-invalid @enderror" name="tgl_keluar" id="tgl_keluar" value="{{ old('tgl_keluar', $pasien->tgl_keluar) }}">
         @error('tgl_keluar')
         <span class="invalid-feedback">
             {{ $message }}

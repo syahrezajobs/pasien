@@ -46,8 +46,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Info Paien</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <h5 class="modal-title" id="exampleModalLabel">Info Pasien</h5>
                         </div>
                         <div class="modal-body">
                             <p>No. RM : {{ $pasien->no_rm }}</p>
@@ -57,7 +56,7 @@
                             <p>Jenis kelamin : {{ $pasien->gender }}</p>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>

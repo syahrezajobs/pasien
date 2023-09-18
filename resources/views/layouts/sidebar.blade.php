@@ -65,6 +65,19 @@
             <span>Pasien</span>
         </a>
     </li>
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        Laporan
+    </div>
+
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('report.index') }}">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Daftar Pasien</span>
+        </a>
+    </li>
     <!-- Sidebar Toggler (Sidebar) -->
     <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
